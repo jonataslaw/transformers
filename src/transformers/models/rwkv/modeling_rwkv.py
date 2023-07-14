@@ -401,7 +401,7 @@ class RwkvPreTrainedModel(PreTrainedModel):
     An abstract class to handle weights initialization and a simple interface for downloading and loading pretrained
     models.
     """
-
+    supports_gradient_checkpointing = True
     config_class = RwkvConfig
     base_model_prefix = "rwkv"
     _no_split_modules = ["RwkvBlock"]
